@@ -1,0 +1,10 @@
+..\obj\malloc.o: ..\HARDWARE\malloc.c
+..\obj\malloc.o: ..\HARDWARE\malloc.h
+..\obj\malloc.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+..\obj\malloc.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+..\obj\malloc.o: ..\CORE\core_cm4.h
+..\obj\malloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\malloc.o: ..\CORE\core_cmInstr.h
+..\obj\malloc.o: ..\CORE\core_cmFunc.h
+..\obj\malloc.o: ..\CORE\core_cm4_simd.h
+..\obj\malloc.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h

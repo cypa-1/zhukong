@@ -1,0 +1,10 @@
+..\obj\sys.o: ..\SYSTEM\sys\sys.c
+..\obj\sys.o: ..\SYSTEM\sys\sys.h
+..\obj\sys.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+..\obj\sys.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+..\obj\sys.o: ..\CORE\core_cm4.h
+..\obj\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\sys.o: ..\CORE\core_cmInstr.h
+..\obj\sys.o: ..\CORE\core_cmFunc.h
+..\obj\sys.o: ..\CORE\core_cm4_simd.h
+..\obj\sys.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
