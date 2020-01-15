@@ -5,10 +5,10 @@
 <h2>Tool Versions:</h2>
 IDE-Version: μVision V5.25.2.0
 Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: fuyue hou, xjtu, LIC=BUUFW-QFZW5-T3AMI-TWQBM-1WVZ3-CF2MT
+License Information: jia aaaa, al, LIC=UB445-G0RF9-8W42D-8XE5G-9TM5L-873CT
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain:       MDK-ARM Professional  Version: 5.25.2.0
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 6 (build 750)
 Assembler:       Armasm.exe V5.06 update 6 (build 750)
@@ -21,589 +21,261 @@ Target DLL:      Segger\JL2CM3.dll V2.99.29.0
 Dialog DLL:      TCM.DLL V1.35.1.0
  
 <h2>Project:</h2>
-D:\My Resourse 666\robocon\FinishedProjects\check\STM32F407 主控板 - ucosiii0926\zhukong\USER\Template.uvprojx
+C:\Users\sz\Desktop\新建文件夹\zhukong\USER\Template.uvprojx
 Project File Date:  01/15/2020
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Template'
-compiling main.c...
-stm32f4xx_conf.h(34): error:  #5: cannot open source input file "stm32f4xx_adc.h": No such file or directory
-  #include "stm32f4xx_adc.h"
-main.c: 0 warnings, 1 error
-compiling stm32f4xx_it.c...
-stm32f4xx_conf.h(34): error:  #5: cannot open source input file "stm32f4xx_adc.h": No such file or directory
-  #include "stm32f4xx_adc.h"
-stm32f4xx_it.c: 0 warnings, 1 error
+Build target 'Template'
 compiling system_stm32f4xx.c...
-stm32f4xx_conf.h(34): error:  #5: cannot open source input file "stm32f4xx_adc.h": No such file or directory
-  #include "stm32f4xx_adc.h"
-system_stm32f4xx.c: 0 warnings, 1 error
-compiling pid.c...
-..\MOVE\pid.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\MOVE\pid.c: 0 warnings, 1 error
-compiling BasicMovement.c...
-..\MOVE\BasicMovement.h(4): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\MOVE\BasicMovement.c: 0 warnings, 1 error
+compiling stm32f4xx_it.c...
+compiling main.c...
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+main.c(211): warning:  #177-D: variable "err"  was declared but never referenced
+  	OS_ERR err;
+main.c(225): warning:  #177-D: variable "err"  was declared but never referenced
+  	OS_ERR err;
+main.c(257): warning:  #177-D: variable "err"  was declared but never referenced
+  	OS_ERR err;
+main.c(259): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, is_key = 0;
+main.c: 5 warnings, 0 errors
 compiling led.c...
-..\HARDWARE\led.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\led.c: 0 warnings, 1 error
+compiling pid.c...
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\MOVE\pid.c: 1 warning, 0 errors
 compiling exti.c...
-..\HARDWARE\exti.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\HARDWARE\exti.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\HARDWARE\exti.c: 1 warning, 0 errors
 compiling key.c...
-..\HARDWARE\key.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\key.c: 0 warnings, 1 error
 compiling usart.c...
-..\HARDWARE\usart.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\usart.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\HARDWARE\usart.c: 1 warning, 0 errors
 compiling pwm.c...
-..\HARDWARE\pwm.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\pwm.c: 0 warnings, 1 error
-compiling lcd.c...
-..\HARDWARE\lcd.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"       
-..\HARDWARE\lcd.c: 0 warnings, 1 error
 compiling font.c...
-compiling touch.c...
-..\HARDWARE\lcd.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"       
-..\HARDWARE\touch.c: 0 warnings, 1 error
-compiling ccd.c...
-..\HARDWARE\ccd.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\ccd.c: 0 warnings, 1 error
+compiling lcd.c...
 compiling qei.c...
-..\HARDWARE\qei.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\qei.c: 0 warnings, 1 error
+compiling ccd.c...
+compiling touch.c...
+..\HARDWARE\touch.c(723): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, is_key = 0;
+..\HARDWARE\touch.c(853): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, is_key = 0;
+..\HARDWARE\touch.c(1006): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, is_key = 0;
+..\HARDWARE\touch.c: 3 warnings, 0 errors
 compiling malloc.c...
-..\HARDWARE\malloc.h(38): error:  #92: identifier-list parameters may only be used in a function definition
-        void (*init)(u8);                                       //初始化
-..\HARDWARE\malloc.h(39): error:  #79: expected a type specifier
-        u8 (*perused)(u8);                              //内存使用率
-..\HARDWARE\malloc.h(39): error:  #92: identifier-list parameters may only be used in a function definition
-        u8 (*perused)(u8);                              //内存使用率
-..\HARDWARE\malloc.h(39): error:  #90: function returning function is not allowed
-        u8 (*perused)(u8);                              //内存使用率
-..\HARDWARE\malloc.h(39): error:  #168: a function type is not allowed here
-        u8 (*perused)(u8);                              //内存使用率
-..\HARDWARE\malloc.h(40): error:  #20: identifier "u8" is undefined
-        u8      *membase[SRAMBANK];                             //内存池 管理SRAMBANK个区域的内存
-..\HARDWARE\malloc.h(41): error:  #20: identifier "u16" is undefined
-        u16 *memmap[SRAMBANK];                          //内存管理状态表
-..\HARDWARE\malloc.h(42): error:  #20: identifier "u8" is undefined
-        u8  memrdy[SRAMBANK];                           //内存管理是否就绪
-..\HARDWARE\malloc.h(46): error:  #20: identifier "u8" is undefined
-  void mymemset(void *s,u8 c,u32 count);        //设置内存
-..\HARDWARE\malloc.h(46): error:  #20: identifier "u32" is undefined
-  void mymemset(void *s,u8 c,u32 count);        //设置内存
-..\HARDWARE\malloc.h(47): error:  #20: identifier "u32" is undefined
-  void mymemcpy(void *des,void *src,u32 n);//复制内存     
-..\HARDWARE\malloc.h(48): error:  #20: identifier "u8" is undefined
-  void my_mem_init(u8 memx);                            //内存管理初始化函数(外/内部调用)
-..\HARDWARE\malloc.h(49): error:  #20: identifier "u32" is undefined
-  u32 my_mem_malloc(u8 memx,u32 size);  //内存分配(内部调用)
-..\HARDWARE\malloc.h(49): error:  #20: identifier "u8" is undefined
-  u32 my_mem_malloc(u8 memx,u32 size);  //内存分配(内部调用)
-..\HARDWARE\malloc.h(49): error:  #20: identifier "u32" is undefined
-  u32 my_mem_malloc(u8 memx,u32 size);  //内存分配(内部调用)
-..\HARDWARE\malloc.h(50): error:  #20: identifier "u8" is undefined
-  u8 my_mem_free(u8 memx,u32 offset);           //内存释放(内部调用)
-..\HARDWARE\malloc.h(50): error:  #20: identifier "u8" is undefined
-  u8 my_mem_free(u8 memx,u32 offset);           //内存释放(内部调用)
-..\HARDWARE\malloc.h(50): error:  #20: identifier "u32" is undefined
-  u8 my_mem_free(u8 memx,u32 offset);           //内存释放(内部调用)
-..\HARDWARE\malloc.h(51): error:  #20: identifier "u8" is undefined
-  u8 my_mem_perused(u8 memx);                           //获得内存使用率(外/内部调用) 
-..\HARDWARE\malloc.h(51): error:  #20: identifier "u8" is undefined
-  u8 my_mem_perused(u8 memx);                           //获得内存使用率(外/内部调用) 
-..\HARDWARE\malloc.h(54): error:  #20: identifier "u8" is undefined
-  void myfree(u8 memx,void *ptr);                       //内存释放(外部调用)
-..\HARDWARE\malloc.h(55): error:  #20: identifier "u8" is undefined
-  void *mymalloc(u8 memx,u32 size);                     //内存分配(外部调用)
-..\HARDWARE\malloc.h(55): error:  #20: identifier "u32" is undefined
-  void *mymalloc(u8 memx,u32 size);                     //内存分配(外部调用)
-..\HARDWARE\malloc.h(56): error:  #20: identifier "u8" is undefined
-  void *mymalloc0(u8 memx,u32 size);
-..\HARDWARE\malloc.h(56): error:  #20: identifier "u32" is undefined
-  void *mymalloc0(u8 memx,u32 size);
-..\HARDWARE\malloc.h(57): error:  #20: identifier "u8" is undefined
-  void *fb_alloc(u8 memx, u32 size);
-..\HARDWARE\malloc.h(57): error:  #20: identifier "u32" is undefined
-  void *fb_alloc(u8 memx, u32 size);
-..\HARDWARE\malloc.h(58): error:  #20: identifier "u8" is undefined
-  void *myrealloc(u8 memx,void *ptr,u32 size);//重新分配内存(外部调用)
-..\HARDWARE\malloc.h(58): error:  #20: identifier "u32" is undefined
-  void *myrealloc(u8 memx,void *ptr,u32 size);//重新分配内存(外部调用)
-..\HARDWARE\malloc.c(4): error:  #20: identifier "u8" is undefined
-  __align(32) u8 mem1base[MEM1_MAX_SIZE];                                                                                                       //内部SRAM内存池
-..\HARDWARE\malloc.c: 0 warnings, 30 errors
-compiling sdio_sdcard.c...
-..\HARDWARE\sdio_sdcard.h(116): error:  #20: identifier "u8" is undefined
-        u8  CSDStruct;            /*!< CSD structure */
-..\HARDWARE\sdio_sdcard.h(117): error:  #20: identifier "u8" is undefined
-        u8  SysSpecVersion;       /*!< System specification version */
-..\HARDWARE\sdio_sdcard.h(118): error:  #20: identifier "u8" is undefined
-        u8  Reserved1;            /*!< Reserved */
-..\HARDWARE\sdio_sdcard.h(119): error:  #20: identifier "u8" is undefined
-        u8  TAAC;                 /*!< Data read access-time 1 */
-..\HARDWARE\sdio_sdcard.h(120): error:  #20: identifier "u8" is undefined
-        u8  NSAC;                 /*!< Data read access-time 2 in CLK cycles */
-..\HARDWARE\sdio_sdcard.h(121): error:  #20: identifier "u8" is undefined
-        u8  MaxBusClkFrec;        /*!< Max. bus clock frequency */
-..\HARDWARE\sdio_sdcard.h(122): error:  #20: identifier "u16" is undefined
-        u16 CardComdClasses;      /*!< Card command classes */
-..\HARDWARE\sdio_sdcard.h(123): error:  #20: identifier "u8" is undefined
-        u8  RdBlockLen;           /*!< Max. read data block length */
-..\HARDWARE\sdio_sdcard.h(124): error:  #20: identifier "u8" is undefined
-        u8  PartBlockRead;        /*!< Partial blocks for read allowed */
-..\HARDWARE\sdio_sdcard.h(125): error:  #20: identifier "u8" is undefined
-        u8  WrBlockMisalign;      /*!< Write block misalignment */
-..\HARDWARE\sdio_sdcard.h(126): error:  #20: identifier "u8" is undefined
-        u8  RdBlockMisalign;      /*!< Read block misalignment */
-..\HARDWARE\sdio_sdcard.h(127): error:  #20: identifier "u8" is undefined
-        u8  DSRImpl;              /*!< DSR implemented */
-..\HARDWARE\sdio_sdcard.h(128): error:  #20: identifier "u8" is undefined
-        u8  Reserved2;            /*!< Reserved */
-..\HARDWARE\sdio_sdcard.h(129): error:  #20: identifier "u32" is undefined
-        u32 DeviceSize;           /*!< Device Size */
-..\HARDWARE\sdio_sdcard.h(130): error:  #20: identifier "u8" is undefined
-        u8  MaxRdCurrentVDDMin;   /*!< Max. read current @ VDD min */
-..\HARDWARE\sdio_sdcard.h(131): error:  #20: identifier "u8" is undefined
-        u8  MaxRdCurrentVDDMax;   /*!< Max. read current @ VDD max */
-..\HARDWARE\sdio_sdcard.h(132): error:  #20: identifier "u8" is undefined
-        u8  MaxWrCurrentVDDMin;   /*!< Max. write current @ VDD min */
-..\HARDWARE\sdio_sdcard.h(133): error:  #20: identifier "u8" is undefined
-        u8  MaxWrCurrentVDDMax;   /*!< Max. write current @ VDD max */
-..\HARDWARE\sdio_sdcard.h(134): error:  #20: identifier "u8" is undefined
-        u8  DeviceSizeMul;        /*!< Device size multiplier */
-..\HARDWARE\sdio_sdcard.h(135): error:  #20: identifier "u8" is undefined
-        u8  EraseGrSize;          /*!< Erase group size */
-..\HARDWARE\sdio_sdcard.h(136): error:  #20: identifier "u8" is undefined
-        u8  EraseGrMul;           /*!< Erase group size multiplier */
-..\HARDWARE\sdio_sdcard.h(137): error:  #20: identifier "u8" is undefined
-        u8  WrProtectGrSize;      /*!< Write protect group size */
-..\HARDWARE\sdio_sdcard.h(138): error:  #20: identifier "u8" is undefined
-        u8  WrProtectGrEnable;    /*!< Write protect group enable */
-..\HARDWARE\sdio_sdcard.h(139): error:  #20: identifier "u8" is undefined
-        u8  ManDeflECC;           /*!< Manufacturer default ECC */
-..\HARDWARE\sdio_sdcard.h(140): error:  #20: identifier "u8" is undefined
-        u8  WrSpeedFact;          /*!< Write speed factor */
-..\HARDWARE\sdio_sdcard.h(141): error:  #20: identifier "u8" is undefined
-        u8  MaxWrBlockLen;        /*!< Max. write data block length */
-..\HARDWARE\sdio_sdcard.h(142): error:  #20: identifier "u8" is undefined
-        u8  WriteBlockPaPartial;  /*!< Partial blocks for write allowed */
-..\HARDWARE\sdio_sdcard.h(143): error:  #20: identifier "u8" is undefined
-        u8  Reserved3;            /*!< Reserded */
-..\HARDWARE\sdio_sdcard.h(144): error:  #20: identifier "u8" is undefined
-        u8  ContentProtectAppli;  /*!< Content protection application */
-..\HARDWARE\sdio_sdcard.h(145): error:  #20: identifier "u8" is undefined
-        u8  FileFormatGrouop;     /*!< File format group */
-..\HARDWARE\sdio_sdcard.c: 0 warnings, 30 errors
 compiling sram.c...
-..\HARDWARE\sram.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\sram.c: 0 warnings, 1 error
+compiling sdio_sdcard.c...
 compiling timer.c...
-..\HARDWARE\timer.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\timer.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\HARDWARE\timer.c: 1 warning, 0 errors
 compiling can_database.c...
-..\HARDWARE\can_database.c(2): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\HARDWARE\can_database.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\HARDWARE\can_database.c: 1 warning, 0 errors
 compiling can.c...
-..\HARDWARE\can.c(14): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\HARDWARE\can.c: 0 warnings, 1 error
-compiling mpu9250.c...
-..\HARDWARE\mpu9250.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\mpu9250.c: 0 warnings, 1 error
-compiling mpuiic.c...
-..\HARDWARE\mpuiic.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\mpuiic.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\HARDWARE\can.c: 1 warning, 0 errors
 compiling omvi2c.c...
+compiling mpuiic.c...
+compiling mpu9250.c...
 compiling motor.c...
-..\HARDWARE\motor.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\HARDWARE\motor.c: 0 warnings, 1 error
 compiling M_List.c...
-..\MENU\M_List.h(5): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\MENU\M_List.c: 0 warnings, 1 error
 compiling M_Func.c...
-..\MENU\M_List.h(5): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\MENU\M_Func.c: 0 warnings, 1 error
 compiling M_Sys.c...
-..\MENU\M_Sys.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\MENU\M_Sys.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\MENU\M_Sys.c(71): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(177): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(177): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(274): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(274): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(378): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(378): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(460): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(460): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(542): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(542): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(629): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(629): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(694): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(694): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(767): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  		u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(767): warning:  #177-D: variable "i"  was declared but never referenced
+  		u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(814): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(814): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(895): warning:  #1-D: last line of file ends without a newline
+  }
+..\MENU\M_Sys.c(856): warning:  #177-D: variable "tp_last"  was declared but never referenced
+     u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c(856): warning:  #177-D: variable "i"  was declared but never referenced
+     u8 tp_last, key_value, i, is_key = 0;
+..\MENU\M_Sys.c: 23 warnings, 0 errors
 compiling mymath.c...
-..\FUNCTION\mymath.h(6): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\FUNCTION\mymath.c: 0 warnings, 1 error
 compiling exfuns.c...
-..\FATFS\exfuns\exfuns.h(4): error:  #5: cannot open source input file "ff.h": No such file or directory
-  #include "ff.h"
-..\FATFS\exfuns\exfuns.c: 0 warnings, 1 error
 compiling diskio.c...
-..\FATFS\src\diskio.c(11): error:  #5: cannot open source input file "sdio_sdcard.h": No such file or directory
-  #include "sdio_sdcard.h"
-..\FATFS\src\diskio.c: 0 warnings, 1 error
 compiling ff.c...
 compiling cc936.c...
-compiling delay.c...
-..\SYSTEM\delay\delay.h(3): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include <sys.h>        
-..\SYSTEM\delay\delay.c: 0 warnings, 1 error
 compiling sys.c...
-..\SYSTEM\sys\sys.h(86): error:  #20: identifier "u32" is undefined
-  void MSR_MSP(u32 addr);       //设置堆栈地址 
-..\SYSTEM\sys\sys.c(40): error:  #20: identifier "u32" is undefined
-  __asm void MSR_MSP(u32 addr) 
-..\SYSTEM\sys\sys.c: 0 warnings, 2 errors
-assembling startup_stm32f40_41xxx.s...
 compiling misc.c...
-..\FWLIB\src\misc.c(76): error:  #5: cannot open source input file "misc.h": No such file or directory
-  #include "misc.h"
-..\FWLIB\src\misc.c: 0 warnings, 1 error
+compiling delay.c...
 compiling stm32f4xx_adc.c...
-..\FWLIB\src\stm32f4xx_adc.c(106): error:  #5: cannot open source input file "stm32f4xx_adc.h": No such file or directory
-  #include "stm32f4xx_adc.h"
-..\FWLIB\src\stm32f4xx_adc.c: 0 warnings, 1 error
-compiling stm32f4xx_can.c...
-..\FWLIB\src\stm32f4xx_can.c(84): error:  #5: cannot open source input file "stm32f4xx_can.h": No such file or directory
-  #include "stm32f4xx_can.h"
-..\FWLIB\src\stm32f4xx_can.c: 0 warnings, 1 error
 compiling stm32f4xx_crc.c...
-..\FWLIB\src\stm32f4xx_crc.c(29): error:  #5: cannot open source input file "stm32f4xx_crc.h": No such file or directory
-  #include "stm32f4xx_crc.h"
-..\FWLIB\src\stm32f4xx_crc.c: 0 warnings, 1 error
-compiling stm32f4xx_cryp.c...
-..\FWLIB\src\stm32f4xx_cryp.c(164): error:  #5: cannot open source input file "stm32f4xx_cryp.h": No such file or directory
-  #include "stm32f4xx_cryp.h"
-..\FWLIB\src\stm32f4xx_cryp.c: 0 warnings, 1 error
-compiling stm32f4xx_cryp_aes.c...
-..\FWLIB\src\stm32f4xx_cryp_aes.c(55): error:  #5: cannot open source input file "stm32f4xx_cryp.h": No such file or directory
-  #include "stm32f4xx_cryp.h"
-..\FWLIB\src\stm32f4xx_cryp_aes.c: 0 warnings, 1 error
+compiling stm32f4xx_can.c...
 compiling stm32f4xx_cryp_des.c...
-..\FWLIB\src\stm32f4xx_cryp_des.c(48): error:  #5: cannot open source input file "stm32f4xx_cryp.h": No such file or directory
-  #include "stm32f4xx_cryp.h"
-..\FWLIB\src\stm32f4xx_cryp_des.c: 0 warnings, 1 error
+compiling stm32f4xx_cryp.c...
+compiling stm32f4xx_cryp_aes.c...
 compiling stm32f4xx_cryp_tdes.c...
-..\FWLIB\src\stm32f4xx_cryp_tdes.c(48): error:  #5: cannot open source input file "stm32f4xx_cryp.h": No such file or directory
-  #include "stm32f4xx_cryp.h"
-..\FWLIB\src\stm32f4xx_cryp_tdes.c: 0 warnings, 1 error
 compiling stm32f4xx_dac.c...
-..\FWLIB\src\stm32f4xx_dac.c(131): error:  #5: cannot open source input file "stm32f4xx_dac.h": No such file or directory
-  #include "stm32f4xx_dac.h"
-..\FWLIB\src\stm32f4xx_dac.c: 0 warnings, 1 error
 compiling stm32f4xx_dbgmcu.c...
-..\FWLIB\src\stm32f4xx_dbgmcu.c(29): error:  #5: cannot open source input file "stm32f4xx_dbgmcu.h": No such file or directory
-  #include "stm32f4xx_dbgmcu.h"
-..\FWLIB\src\stm32f4xx_dbgmcu.c: 0 warnings, 1 error
 compiling stm32f4xx_dcmi.c...
-..\FWLIB\src\stm32f4xx_dcmi.c(86): error:  #5: cannot open source input file "stm32f4xx_dcmi.h": No such file or directory
-  #include "stm32f4xx_dcmi.h"
-..\FWLIB\src\stm32f4xx_dcmi.c: 0 warnings, 1 error
-compiling stm32f4xx_dma2d.c...
-..\FWLIB\src\stm32f4xx_dma2d.c(58): error:  #5: cannot open source input file "stm32f4xx_dma2d.h": No such file or directory
-  #include "stm32f4xx_dma2d.h"
-..\FWLIB\src\stm32f4xx_dma2d.c: 0 warnings, 1 error
 compiling stm32f4xx_dma.c...
-..\FWLIB\src\stm32f4xx_dma.c(124): error:  #5: cannot open source input file "stm32f4xx_dma.h": No such file or directory
-  #include "stm32f4xx_dma.h"
-..\FWLIB\src\stm32f4xx_dma.c: 0 warnings, 1 error
+compiling stm32f4xx_dma2d.c...
 compiling stm32f4xx_exti.c...
-..\FWLIB\src\stm32f4xx_exti.c(67): error:  #5: cannot open source input file "stm32f4xx_exti.h": No such file or directory
-  #include "stm32f4xx_exti.h"
-..\FWLIB\src\stm32f4xx_exti.c: 0 warnings, 1 error
-compiling stm32f4xx_flash.c...
-..\FWLIB\src\stm32f4xx_flash.c(72): error:  #5: cannot open source input file "stm32f4xx_flash.h": No such file or directory
-  #include "stm32f4xx_flash.h"
-..\FWLIB\src\stm32f4xx_flash.c: 0 warnings, 1 error
 compiling stm32f4xx_flash_ramfunc.c...
-..\FWLIB\src\stm32f4xx_flash_ramfunc.c(58): error:  #5: cannot open source input file "stm32f4xx_flash_ramfunc.h": No such file or directory
-  #include "stm32f4xx_flash_ramfunc.h"
-..\FWLIB\src\stm32f4xx_flash_ramfunc.c: 0 warnings, 1 error
-compiling stm32f4xx_fsmc.c...
-..\FWLIB\src\stm32f4xx_fsmc.c(35): error:  #5: cannot open source input file "stm32f4xx_fsmc.h": No such file or directory
-  #include "stm32f4xx_fsmc.h"
-..\FWLIB\src\stm32f4xx_fsmc.c: 0 warnings, 1 error
+compiling stm32f4xx_flash.c...
 compiling stm32f4xx_gpio.c...
-..\FWLIB\src\stm32f4xx_gpio.c(84): error:  #5: cannot open source input file "stm32f4xx_gpio.h": No such file or directory
-  #include "stm32f4xx_gpio.h"
-..\FWLIB\src\stm32f4xx_gpio.c: 0 warnings, 1 error
 compiling stm32f4xx_hash.c...
-..\FWLIB\src\stm32f4xx_hash.c(123): error:  #5: cannot open source input file "stm32f4xx_hash.h": No such file or directory
-  #include "stm32f4xx_hash.h"
-..\FWLIB\src\stm32f4xx_hash.c: 0 warnings, 1 error
-compiling stm32f4xx_hash_md5.c...
-..\FWLIB\src\stm32f4xx_hash_md5.c(47): error:  #5: cannot open source input file "stm32f4xx_hash.h": No such file or directory
-  #include "stm32f4xx_hash.h"
-..\FWLIB\src\stm32f4xx_hash_md5.c: 0 warnings, 1 error
+compiling stm32f4xx_fsmc.c...
 compiling stm32f4xx_hash_sha1.c...
-..\FWLIB\src\stm32f4xx_hash_sha1.c(47): error:  #5: cannot open source input file "stm32f4xx_hash.h": No such file or directory
-  #include "stm32f4xx_hash.h"
-..\FWLIB\src\stm32f4xx_hash_sha1.c: 0 warnings, 1 error
+compiling stm32f4xx_hash_md5.c...
 compiling stm32f4xx_i2c.c...
-..\FWLIB\src\stm32f4xx_i2c.c(92): error:  #5: cannot open source input file "stm32f4xx_i2c.h": No such file or directory
-  #include "stm32f4xx_i2c.h"
-..\FWLIB\src\stm32f4xx_i2c.c: 0 warnings, 1 error
 compiling stm32f4xx_iwdg.c...
-..\FWLIB\src\stm32f4xx_iwdg.c(85): error:  #5: cannot open source input file "stm32f4xx_iwdg.h": No such file or directory
-  #include "stm32f4xx_iwdg.h"
-..\FWLIB\src\stm32f4xx_iwdg.c: 0 warnings, 1 error
-compiling stm32f4xx_ltdc.c...
-..\FWLIB\src\stm32f4xx_ltdc.c(76): error:  #5: cannot open source input file "stm32f4xx_ltdc.h": No such file or directory
-  #include "stm32f4xx_ltdc.h"
-..\FWLIB\src\stm32f4xx_ltdc.c: 0 warnings, 1 error
 compiling stm32f4xx_pwr.c...
-..\FWLIB\src\stm32f4xx_pwr.c(38): error:  #5: cannot open source input file "stm32f4xx_pwr.h": No such file or directory
-  #include "stm32f4xx_pwr.h"
-..\FWLIB\src\stm32f4xx_pwr.c: 0 warnings, 1 error
-compiling stm32f4xx_rcc.c...
-..\FWLIB\src\stm32f4xx_rcc.c(59): error:  #5: cannot open source input file "stm32f4xx_rcc.h": No such file or directory
-  #include "stm32f4xx_rcc.h"
-..\FWLIB\src\stm32f4xx_rcc.c: 0 warnings, 1 error
+compiling stm32f4xx_ltdc.c...
 compiling stm32f4xx_rng.c...
-..\FWLIB\src\stm32f4xx_rng.c(56): error:  #5: cannot open source input file "stm32f4xx_rng.h": No such file or directory
-  #include "stm32f4xx_rng.h"
-..\FWLIB\src\stm32f4xx_rng.c: 0 warnings, 1 error
+compiling stm32f4xx_rcc.c...
 compiling stm32f4xx_rtc.c...
-..\FWLIB\src\stm32f4xx_rtc.c(285): error:  #5: cannot open source input file "stm32f4xx_rtc.h": No such file or directory
-  #include "stm32f4xx_rtc.h"
-..\FWLIB\src\stm32f4xx_rtc.c: 0 warnings, 1 error
 compiling stm32f4xx_sai.c...
-..\FWLIB\src\stm32f4xx_sai.c(126): error:  #5: cannot open source input file "stm32f4xx_sai.h": No such file or directory
-  #include "stm32f4xx_sai.h"
-..\FWLIB\src\stm32f4xx_sai.c: 0 warnings, 1 error
 compiling stm32f4xx_sdio.c...
-..\FWLIB\src\stm32f4xx_sdio.c(156): error:  #5: cannot open source input file "stm32f4xx_sdio.h": No such file or directory
-  #include "stm32f4xx_sdio.h"
-..\FWLIB\src\stm32f4xx_sdio.c: 0 warnings, 1 error
 compiling stm32f4xx_spi.c...
-..\FWLIB\src\stm32f4xx_spi.c(159): error:  #5: cannot open source input file "stm32f4xx_spi.h": No such file or directory
-  #include "stm32f4xx_spi.h"
-..\FWLIB\src\stm32f4xx_spi.c: 0 warnings, 1 error
 compiling stm32f4xx_syscfg.c...
-..\FWLIB\src\stm32f4xx_syscfg.c(50): error:  #5: cannot open source input file "stm32f4xx_syscfg.h": No such file or directory
-  #include "stm32f4xx_syscfg.h"
-..\FWLIB\src\stm32f4xx_syscfg.c: 0 warnings, 1 error
 compiling stm32f4xx_tim.c...
-..\FWLIB\src\stm32f4xx_tim.c(119): error:  #5: cannot open source input file "stm32f4xx_tim.h": No such file or directory
-  #include "stm32f4xx_tim.h"
-..\FWLIB\src\stm32f4xx_tim.c: 0 warnings, 1 error
 compiling stm32f4xx_usart.c...
-..\FWLIB\src\stm32f4xx_usart.c(92): error:  #5: cannot open source input file "stm32f4xx_usart.h": No such file or directory
-  #include "stm32f4xx_usart.h"
-..\FWLIB\src\stm32f4xx_usart.c: 0 warnings, 1 error
 compiling stm32f4xx_wwdg.c...
-..\FWLIB\src\stm32f4xx_wwdg.c(84): error:  #5: cannot open source input file "stm32f4xx_wwdg.h": No such file or directory
-  #include "stm32f4xx_wwdg.h"
-..\FWLIB\src\stm32f4xx_wwdg.c: 0 warnings, 1 error
-compiling inv_mpu.c...
-..\DMP\driver\eMPL\inv_mpu.h(23): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\DMP\driver\eMPL\inv_mpu.c: 0 warnings, 1 error
 compiling inv_mpu_dmp_motion_driver.c...
-..\DMP\driver\eMPL\inv_mpu.h(23): error:  #5: cannot open source input file "sys.h": No such file or directory
-  #include "sys.h"
-..\DMP\driver\eMPL\inv_mpu_dmp_motion_driver.c: 0 warnings, 1 error
-compiling log_stm32.c...
-..\DMP\driver\stm32L\packet.h(24): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\driver\stm32L\log_stm32.c: 0 warnings, 1 error
 compiling eMPL_outputs.c...
-..\DMP\eMPL-hal\eMPL_outputs.h(19): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\eMPL-hal\eMPL_outputs.c: 0 warnings, 1 error
-compiling data_builder.c...
-..\DMP\mllite\ml_math_func.h(10): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\mllite\data_builder.c: 0 warnings, 1 error
+compiling inv_mpu.c...
 compiling hal_outputs.c...
-..\DMP\mllite\hal_outputs.h(7): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\mllite\hal_outputs.c: 0 warnings, 1 error
+compiling log_stm32.c...
+compiling data_builder.c...
 compiling message_layer.c...
-..\DMP\mllite\message_layer.h(10): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\mllite\message_layer.c: 0 warnings, 1 error
-compiling ml_math_func.c...
-..\DMP\mllite\ml_math_func.c(24): error:  #5: cannot open source input file "mlmath.h": No such file or directory
-  #include "mlmath.h"
-..\DMP\mllite\ml_math_func.c: 0 warnings, 1 error
 compiling mlmath.c...
+compiling ml_math_func.c...
 compiling mpl.c...
-..\DMP\mllite\storage_manager.h(7): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\mllite\mpl.c: 0 warnings, 1 error
 compiling results_holder.c...
-..\DMP\mllite\results_holder.h(7): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\mllite\results_holder.c: 0 warnings, 1 error
 compiling start_manager.c...
-..\DMP\mllite\start_manager.c(25): error:  #5: cannot open source input file "log.h": No such file or directory
-  #include "log.h"
-..\DMP\mllite\start_manager.c: 0 warnings, 1 error
 compiling storage_manager.c...
-..\DMP\mllite\storage_manager.h(7): error:  #5: cannot open source input file "mltypes.h": No such file or directory
-  #include "mltypes.h"
-..\DMP\mllite\storage_manager.c: 0 warnings, 1 error
-compiling bsp.c...
-..\UCOSIII\uCOS-BSP\bsp.c(2): error:  #5: cannot open source input file "bsp.h": No such file or directory
-  #include  <bsp.h>
-..\UCOSIII\uCOS-BSP\bsp.c: 0 warnings, 1 error
 compiling cpu_core.c...
-..\UCOSIII\uC-CPU\cpu_core.c(43): error:  #5: cannot open source input file "cpu_core.h": No such file or directory
-  #include  <cpu_core.h>
-..\UCOSIII\uC-CPU\cpu_core.c: 0 warnings, 1 error
-assembling cpu_a.asm...
 compiling cpu_c.c...
-..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu_c.c(48): error:  #5: cannot open source input file "cpu.h": No such file or directory
-  #include  <cpu.h>
-..\UCOSIII\uC-CPU\ARM-Cortex-M4\RealView\cpu_c.c: 0 warnings, 1 error
 compiling lib_ascii.c...
-..\UCOSIII\uC-LIB\lib_ascii.c(82): error:  #5: cannot open source input file "lib_ascii.h": No such file or directory
-  #include  <lib_ascii.h>
-..\UCOSIII\uC-LIB\lib_ascii.c: 0 warnings, 1 error
 compiling lib_math.c...
-..\UCOSIII\uC-LIB\lib_math.c(69): error:  #5: cannot open source input file "lib_math.h": No such file or directory
-  #include  <lib_math.h>
-..\UCOSIII\uC-LIB\lib_math.c: 0 warnings, 1 error
 compiling lib_mem.c...
-..\UCOSIII\uC-LIB\lib_mem.c(60): error:  #5: cannot open source input file "lib_mem.h": No such file or directory
-  #include  <lib_mem.h>
-..\UCOSIII\uC-LIB\lib_mem.c: 0 warnings, 1 error
-compiling lib_str.c...
-..\UCOSIII\uC-LIB\lib_str.c(70): error:  #5: cannot open source input file "lib_str.h": No such file or directory
-  #include  <lib_str.h>
-..\UCOSIII\uC-LIB\lib_str.c: 0 warnings, 1 error
-assembling lib_mem_a.asm...
+compiling bsp.c...
 compiling os_cfg_app.c...
-..\UCOSIII\uCOS-III\Source\os_cfg_app.c(36): error:  #5: cannot open source input file "os_cfg_app.h": No such file or directory
-  #include <os_cfg_app.h>
-..\UCOSIII\uCOS-III\Source\os_cfg_app.c: 0 warnings, 1 error
-compiling os_core.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_core.c: 0 warnings, 1 error
+compiling lib_str.c...
 compiling os_dbg.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_dbg.c: 0 warnings, 1 error
+compiling os_core.c...
 compiling os_flag.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_flag.c: 0 warnings, 1 error
 compiling os_int.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_int.c: 0 warnings, 1 error
 compiling os_mem.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_mem.c: 0 warnings, 1 error
 compiling os_msg.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_msg.c: 0 warnings, 1 error
-compiling os_mutex.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_mutex.c: 0 warnings, 1 error
 compiling os_pend_multi.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_pend_multi.c: 0 warnings, 1 error
+compiling os_mutex.c...
 compiling os_prio.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_prio.c: 0 warnings, 1 error
 compiling os_q.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_q.c: 0 warnings, 1 error
 compiling os_sem.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_sem.c: 0 warnings, 1 error
 compiling os_stat.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_stat.c: 0 warnings, 1 error
-compiling os_task.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_task.c: 0 warnings, 1 error
 compiling os_tick.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_tick.c: 0 warnings, 1 error
+compiling os_task.c...
 compiling os_time.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_time.c: 0 warnings, 1 error
 compiling os_tmr.c...
-..\UCOSIII\uCOS-III\Source\os_tmr.c(34): error:  #5: cannot open source input file "os.h": No such file or directory
-  #include <os.h>
-..\UCOSIII\uCOS-III\Source\os_tmr.c: 0 warnings, 1 error
 compiling os_var.c...
-..\UCOSIII\uCOS-III\Source\os.h(53): error:  #5: cannot open source input file "os_cfg.h": No such file or directory
-  #include <os_cfg.h>
-..\UCOSIII\uCOS-III\Source\os_var.c: 0 warnings, 1 error
-compiling os_cpu_c.c...
-..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_c.c(52): error:  #5: cannot open source input file "os.h": No such file or directory
-  #include  <os.h>
-..\UCOSIII\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_c.c: 0 warnings, 1 error
-assembling os_cpu_a.asm...
 compiling os_app_hooks.c...
-..\UCOSIII\uCOS-CONFIG\os_app_hooks.c(34): error:  #5: cannot open source input file "os.h": No such file or directory
-  #include <os.h>
-..\UCOSIII\uCOS-CONFIG\os_app_hooks.c: 0 warnings, 1 error
+compiling os_cpu_c.c...
 compiling gyro.c...
-..\GPS\gyro.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\GPS\gyro.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\GPS\gyro.c(14): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  		u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\gyro.c(227): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  {  	u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\gyro.c(227): warning:  #177-D: variable "i"  was declared but never referenced
+  {  	u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\gyro.c(322): warning:  #1-D: last line of file ends without a newline
+  }
+..\GPS\gyro.c(268): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  		u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\gyro.c(268): warning:  #177-D: variable "i"  was declared but never referenced
+  		u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\gyro.c: 7 warnings, 0 errors
 compiling command.c...
-..\GPS\command.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h" 
-..\GPS\command.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\GPS\command.c: 1 warning, 0 errors
 compiling gps.c...
-..\GPS\gps.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\GPS\gps.c: 0 warnings, 1 error
-compiling encoder.c...
-..\GPS\encoder.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\GPS\encoder.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\GPS\gps.c: 1 warning, 0 errors
 compiling machine.c...
-..\ROUTE\machine.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h" 
-..\ROUTE\machine.c: 0 warnings, 1 error
-compiling pointpath.c...
-..\ROUTE\pointpath.c(3): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\ROUTE\pointpath.c: 0 warnings, 1 error
-compiling route.c...
-..\ROUTE\route.c(1): error:  #5: cannot open source input file "all.h": No such file or directory
-  #include "all.h"
-..\ROUTE\route.c: 0 warnings, 1 error
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\ROUTE\machine.c: 1 warning, 0 errors
+compiling encoder.c...
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\GPS\encoder.c(14): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\encoder.c(162): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\encoder.c(282): warning:  #177-D: variable "tp_last"  was declared but never referenced
+  	u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\encoder.c(282): warning:  #177-D: variable "i"  was declared but never referenced
+  	u8 tp_last, key_value, i=0, is_key = 0;
+..\GPS\encoder.c(311): warning:  #1-D: last line of file ends without a newline
+  }
+..\GPS\encoder.c: 6 warnings, 0 errors
 compiling PointRoute.c...
-"..\OBJ\Template.axf" - 171 Error(s), 0 Warning(s).
+compiling pointpath.c...
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\ROUTE\pointpath.c(49): warning:  #1-D: last line of file ends without a newline
+  		  
+..\ROUTE\pointpath.c: 2 warnings, 0 errors
+compiling route.c...
+..\ROUTE\route.h(24): warning:  #1-D: last line of file ends without a newline
+   
+..\ROUTE\route.c: 1 warning, 0 errors
+linking...
+Program Size: Code=53216 RO-data=1804 RW-data=4232 ZI-data=1236352  
+FromELF: creating hex file...
+"..\OBJ\Template.axf" - 0 Error(s), 56 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -617,8 +289,7 @@ Package Vendor: Keil
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
-Build Time Elapsed:  00:01:32
+Build Time Elapsed:  00:01:13
 </pre>
 </body>
 </html>

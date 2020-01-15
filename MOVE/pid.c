@@ -22,8 +22,8 @@ int set_x_loc;
 int set_y_loc;
 
 
-int Mode[4] = {	3,//main
-								3,//angle
+int Mode[4] = {	Location_Mode,//main
+								Location_Mode,//angle
 								Location_Mode,//side1
 								Location_Mode};//side2
 
@@ -201,6 +201,14 @@ void PID_Init(void)
 	PID_struct_init(&pid_y_loc, DELTA_PID, 9600, 9600,
 								0.80f,	0.003f,	0.000f	);  //4 motos angular location closeloop.}
 	
+		PID_struct_init(&pid_spd[0], DELTA_PID, 8000, 16384,
+								24.0f,	1.2f,	0.02f	);  //4 motos angular rate closeloop.  0.80f,	0.03f,	0.0015f	(³¬µ÷)
+	PID_struct_init(&pid_loc[0], DELTA_PID, 9600, 9600,
+								0.80f,	0.003f,	0.000f	);  //4 motos angular location closeloop.}
+	PID_struct_init(&pid_spd[1], DELTA_PID, 8000, 16384,
+								24.0f,	1.2f,	0.02f	);  //4 motos angular rate closeloop.  0.80f,	0.03f,	0.0015f	(³¬µ÷)
+	PID_struct_init(&pid_loc[1], DELTA_PID, 9600, 9600,
+								0.80f,	0.003f,	0.000f	);  //4 motos angular location closeloop.}	
 	PID_struct_init(&pid_spd[2], DELTA_PID, 8000, 16384,
 								24.0f,	1.2f,	0.02f	);  //4 motos angular rate closeloop.  0.80f,	0.03f,	0.0015f	(³¬µ÷)
 	PID_struct_init(&pid_loc[2], DELTA_PID, 9600, 9600,

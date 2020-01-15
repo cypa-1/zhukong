@@ -57,17 +57,17 @@ void Can_GPIO_Config(void)
 {
 	GPIO_InitTypeDef  GPIO_InitStructure;
 	/* Configure CAN1 and CAN2 IOs **********************************************/
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 #if USE_CAN1_R0 || USE_CAN1_R1
 	/* Connect CAN pins to AF9 */
-	GPIO_PinAFConfig(GPIOB , GPIO_PinSource8, GPIO_AF_CAN1);
-	GPIO_PinAFConfig(GPIOB , GPIO_PinSource9, GPIO_AF_CAN1); 
+	GPIO_PinAFConfig(GPIOA , GPIO_PinSource11, GPIO_AF_CAN1);
+	GPIO_PinAFConfig(GPIOA , GPIO_PinSource12, GPIO_AF_CAN1); 
 	/* Configure CAN RX and TX pins */
-	GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_8 | GPIO_Pin_9;
+	GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_11 | GPIO_Pin_12;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 #endif
 	
 #if USE_CAN2_R0 || USE_CAN2_R1
