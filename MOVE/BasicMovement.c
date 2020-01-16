@@ -1,6 +1,6 @@
 #include "BasicMovement.h"
 
-struct wheel WheelsSpeed[2];//WheelsSpeed[0]±£Áô¸÷ÂÖ×îÐÂËÙ¶È,WheelsSpeed[1]ÉÏÒ»´ÎËÙ¶È
+struct wheel WheelsSpeed;//WheelsSpeed[0]±£Áô¸÷ÂÖ×îÐÂËÙ¶È,WheelsSpeed[1]ÉÏÒ»´ÎËÙ¶È
 
 /*
  * º¯ÊýÃû: InitWheelsSpeed
@@ -11,18 +11,16 @@ struct wheel WheelsSpeed[2];//WheelsSpeed[0]±£Áô¸÷ÂÖ×îÐÂËÙ¶È,WheelsSpeed[1]ÉÏÒ»´
  */
 void InitWheelsSpeed(void)
 {
-	int i = 0;
-	for (; i < 2; i++)
-	{
-		WheelsSpeed[i].bl.wheelangle = 0;
-		WheelsSpeed[i].bl.wheelvel = 0;
-		WheelsSpeed[i].fl.wheelangle = 0;
-		WheelsSpeed[i].fl.wheelvel = 0;
-		WheelsSpeed[i].br.wheelangle = 0;
-		WheelsSpeed[i].br.wheelvel = 0;
-		WheelsSpeed[i].fr.wheelangle = 0;
-		WheelsSpeed[i].fr.wheelvel = 0;
-	}
+		
+		WheelsSpeed.bl.wheelangle = 0;
+		WheelsSpeed.bl.wheelvel = 0;
+		WheelsSpeed.fl.wheelangle = 0;
+		WheelsSpeed.fl.wheelvel = 0;
+		WheelsSpeed.br.wheelangle = 0;
+		WheelsSpeed.br.wheelvel = 0;
+		WheelsSpeed.fr.wheelangle = 0;
+		WheelsSpeed.fr.wheelvel = 0;
+	
 }
 
 /*
@@ -59,27 +57,25 @@ double GetVectorRadian(Position P)
  */
 void GetWheelsSpeed_Cycle(struct Point M, double w0)
 {
-	WheelsSpeed[1] = WheelsSpeed[0];
-	
 	struct Point TempPosition, TempPosition1;
 //TempPosition´æ´¢ÂÖ×Óµ½×ªÈ¦µÄÏòÁ¿
 	TempPosition1.x = (GPS.position.y - M.y - LENGTH_LR / 2 * sin(GPS.radian) + LENGTH_FB / 2 * cos(GPS.radian));
 	TempPosition1.y = (-GPS.position.x + M.x - LENGTH_FB / 2 * sin(GPS.radian) - LENGTH_LR / 2 * cos(GPS.radian));
 	TempPosition.x = -TempPosition1.y;
 	TempPosition.y = TempPosition1.x;
-	WheelsSpeed[0].fr.wheelvel = GetLength(M, TempPosition) * fabs(w0);	
-	WheelsSpeed[0].fr.wheelangle = GetVectorRadian(TempPosition1)-GPS.radian;	
-	if (WheelsSpeed[0].fr.wheelangle > pi / 2)
+	WheelsSpeed.fr.wheelvel = GetLength(M, TempPosition) * fabs(w0);	
+	WheelsSpeed.fr.wheelangle = GetVectorRadian(TempPosition1)-GPS.radian;	
+	if (WheelsSpeed.fr.wheelangle > pi / 2)
 	{
-		WheelsSpeed[0].fr.wheelangle -= pi;
-		WheelsSpeed[0].fr.wheelvel = -WheelsSpeed[0].fr.wheelvel;
+		WheelsSpeed.fr.wheelangle -= pi;
+		WheelsSpeed.fr.wheelvel = -WheelsSpeed.fr.wheelvel;
 	}
-	if (WheelsSpeed[0].fr.wheelangle < -pi / 2)
+	if (WheelsSpeed.fr.wheelangle < -pi / 2)
 	{
-		WheelsSpeed[0].fr.wheelangle += pi;
-		WheelsSpeed[0].fr.wheelvel = -WheelsSpeed[0].fr.wheelvel;
+		WheelsSpeed.fr.wheelangle += pi;
+		WheelsSpeed.fr.wheelvel = -WheelsSpeed.fr.wheelvel;
 	}
-	WheelsSpeed[0].fr.wheelangle = WheelsSpeed[0].fr.wheelangle / pi * 180;
+	WheelsSpeed.fr.wheelangle = WheelsSpeed.fr.wheelangle / pi * 180;
 	/**********************************/
 
 	TempPosition1.x = (GPS.position.y - M.y + LENGTH_LR / 2 * sin(GPS.radian) + LENGTH_FB / 2 * cos(GPS.radian));
@@ -87,18 +83,18 @@ void GetWheelsSpeed_Cycle(struct Point M, double w0)
 	TempPosition.x = -TempPosition1.y;
 	TempPosition.y = TempPosition1.x;
 	
-	WheelsSpeed[0].fl.wheelvel = GetLength(M, TempPosition) * fabs(w0);
-	WheelsSpeed[0].fl.wheelangle = GetVectorRadian(TempPosition1) - GPS.radian;
+	WheelsSpeed.fl.wheelvel = GetLength(M, TempPosition) * fabs(w0);
+	WheelsSpeed.fl.wheelangle = GetVectorRadian(TempPosition1) - GPS.radian;
 
-	if (WheelsSpeed[0].fl.wheelangle > pi / 2)
+	if (WheelsSpeed.fl.wheelangle > pi / 2)
 	{
-		WheelsSpeed[0].fl.wheelangle -= pi;
-		WheelsSpeed[0].fl.wheelvel = -WheelsSpeed[0].fl.wheelvel;
+		WheelsSpeed.fl.wheelangle -= pi;
+		WheelsSpeed.fl.wheelvel = -WheelsSpeed.fl.wheelvel;
 	}
-	if (WheelsSpeed[0].fl.wheelangle < -pi / 2)
+	if (WheelsSpeed.fl.wheelangle < -pi / 2)
 	{
-		WheelsSpeed[0].fl.wheelangle += pi;
-		WheelsSpeed[0].fl.wheelvel = -WheelsSpeed[0].fl.wheelvel;
+		WheelsSpeed.fl.wheelangle += pi;
+		WheelsSpeed.fl.wheelvel = -WheelsSpeed.fl.wheelvel;
 	}
 
 	/**********************************/
@@ -108,18 +104,18 @@ void GetWheelsSpeed_Cycle(struct Point M, double w0)
 	TempPosition.x = -TempPosition1.y;
 	TempPosition.y = TempPosition1.x;
 	
-	WheelsSpeed[0].bl.wheelvel = GetLength(M, TempPosition) * fabs(w0);
-	WheelsSpeed[0].bl.wheelangle = GetVectorRadian(TempPosition1) - GPS.radian;
+	WheelsSpeed.bl.wheelvel = GetLength(M, TempPosition) * fabs(w0);
+	WheelsSpeed.bl.wheelangle = GetVectorRadian(TempPosition1) - GPS.radian;
 	
-	if (WheelsSpeed[0].bl.wheelangle > pi / 2)
+	if (WheelsSpeed.bl.wheelangle > pi / 2)
 	{
-		WheelsSpeed[0].bl.wheelangle -= pi;
-		WheelsSpeed[0].bl.wheelvel = -WheelsSpeed[0].bl.wheelvel;
+		WheelsSpeed.bl.wheelangle -= pi;
+		WheelsSpeed.bl.wheelvel = -WheelsSpeed.bl.wheelvel;
 	}
-	if (WheelsSpeed[0].bl.wheelangle < -pi / 2)
+	if (WheelsSpeed.bl.wheelangle < -pi / 2)
 	{
-		WheelsSpeed[0].bl.wheelangle += pi;
-		WheelsSpeed[0].bl.wheelvel = -WheelsSpeed[0].bl.wheelvel;
+		WheelsSpeed.bl.wheelangle += pi;
+		WheelsSpeed.bl.wheelvel = -WheelsSpeed.bl.wheelvel;
 	}
 	
 	/**********************************/
@@ -129,188 +125,69 @@ void GetWheelsSpeed_Cycle(struct Point M, double w0)
 	TempPosition.x = -TempPosition1.y;
 	TempPosition.y = TempPosition1.x;
 	
-	WheelsSpeed[0].br.wheelvel = GetLength(M, TempPosition) * fabs(w0);
-	WheelsSpeed[0].br.wheelangle = GetVectorRadian(TempPosition1) - GPS.radian;
+	WheelsSpeed.br.wheelvel = GetLength(M, TempPosition) * fabs(w0);
+	WheelsSpeed.br.wheelangle = GetVectorRadian(TempPosition1) - GPS.radian;
 	
-	if (WheelsSpeed[0].br.wheelangle > pi / 2)
+	if (WheelsSpeed.br.wheelangle > pi / 2)
 	{
-		WheelsSpeed[0].br.wheelangle -= pi;
-		WheelsSpeed[0].br.wheelvel = -WheelsSpeed[0].br.wheelvel;
+		WheelsSpeed.br.wheelangle -= pi;
+		WheelsSpeed.br.wheelvel = -WheelsSpeed.br.wheelvel;
 	}
-	if (WheelsSpeed[0].br.wheelangle < -pi / 2)
+	if (WheelsSpeed.br.wheelangle < -pi / 2)
 	{
-		WheelsSpeed[0].br.wheelangle += pi;
-		WheelsSpeed[0].br.wheelvel = -WheelsSpeed[0].br.wheelvel;
+		WheelsSpeed.br.wheelangle += pi;
+		WheelsSpeed.br.wheelvel = -WheelsSpeed.br.wheelvel;
 	}
 
 }
-
+/*
+ * º¯ÊýÃû: Run_Cycle
+  * Ãè  Êö: ÈÃ³µ×ÓÈÆMµãÒÔ½ÇËÙ¶Èw0(Ë³Ê±ÕëÎªÕý£¬»¡¶ÈÖÆ£©Ðý×ªÊ±¡£
+ * Êä  Èë£ºµãP¾ø¶Ô¿Õ¼ä×ø±êÒÔ¼°½ÇËÙ¶Èw0£¬³µÉíGPS×ø±êb±äÁ¿GPS
+ * Êä  ³ö: ËÄ¸öÂÖ×ÓµÄËÙ¶È´óÐ¡ºÍÒÔ¼°ËÙ¶ÈÓë³µÉí×ø±êÏµyÖá¼Ð½Ç±äÁ¿WheelsSpeed[0]
+ * µ÷  ÓÃ: Íâ²¿µ÷ÓÃ
+ */
+void Run_Cycle(struct Point M, double w0)
+{
+	GetWheelsSpeed_Cycle( M, w0);
+	set_motor(WheelsSpeed);	
+}
 /*
  * º¯ÊýÃû: GetWheelsSpeed_Line
  * Ãè  Êö: Çó³µ×ÓÒÔËÙÂÊv,ÑØÓë¾ø¶Ô×ø±êÏµyÖáÕý·½Ïò¼Ð½Çtheta·½ÏòÖ±ÐÐÊ±ËÄ¸öÂÖ×ÓµÄËÙ¶È´óÐ¡ºÍÒÔ¼°ËÙ¶ÈÓë³µÉí×ø±êÏµyÖáÕý·½Ïò¼Ð½Ç£¬Ë³Ê±ÕëÎªÕý
-		   ¼Ð½ÇÎ»ÓÚ-90~90,²ÉÓÃ½Ç¶ÈÖÆ¡£
+		       ¼Ð½ÇÎ»ÓÚ-90~90,²ÉÓÃ½Ç¶ÈÖÆ¡£
  * Êä  Èë£ºËÙÂÊv£¬¼Ð½Çtheta
  * Êä  ³ö: ËÄ¸öÂÖ×ÓµÄËÙ¶È´óÐ¡ºÍÒÔ¼°ËÙ¶ÈÓë³µÉí×ø±êÏµyÖá¼Ð½Ç±äÁ¿WheelsSpeed[0]
  * µ÷  ÓÃ: Íâ²¿µ÷ÓÃ
  */
 void GetWheelsSpeed_Line(double v,double theta)
 {
-	WheelsSpeed[1] = WheelsSpeed[0];
-	WheelsSpeed[0].bl.wheelvel = WheelsSpeed[0].br.wheelvel = WheelsSpeed[0].fl.wheelvel = WheelsSpeed[0].fl.wheelvel = v;
+	
+	WheelsSpeed.bl.wheelvel = WheelsSpeed.br.wheelvel = WheelsSpeed.fl.wheelvel = WheelsSpeed.fl.wheelvel = v;
 	theta = (theta - GPS.radian);
 	if (theta> pi/2)
 	{
-		WheelsSpeed[0].br.wheelangle =theta- pi;
-		WheelsSpeed[0].bl.wheelvel = WheelsSpeed[0].br.wheelvel = WheelsSpeed[0].fl.wheelvel = WheelsSpeed[0].fl.wheelvel = -v;
+		WheelsSpeed.br.wheelangle =theta- pi;
+		WheelsSpeed.bl.wheelvel = WheelsSpeed.br.wheelvel = WheelsSpeed.fl.wheelvel = WheelsSpeed.fl.wheelvel = -v;
 	}
 	if (theta <- pi/2)
 	{
-		WheelsSpeed[0].br.wheelangle = theta + pi;
-		WheelsSpeed[0].bl.wheelvel = WheelsSpeed[0].br.wheelvel = WheelsSpeed[0].fl.wheelvel = WheelsSpeed[0].fl.wheelvel = -v;
+		WheelsSpeed.br.wheelangle = theta + pi;
+		WheelsSpeed.bl.wheelvel = WheelsSpeed.br.wheelvel = WheelsSpeed.fl.wheelvel = WheelsSpeed.fl.wheelvel = -v;
 	}
 }
-
-void Set_WheelLoc (int WheelID , float WheelDiraction)
-{
-	Mode[WheelID] = Location_Mode ;
-	set_loc[WheelID] = 8192.0 * 140.0 / 360.0 * WheelDiraction ;
-}
-
-
-//¸³¸øÂÖ×ÓËÙ¶È £¬mm/s
-void Set_OdriveSpd ( int WheelID , float OdriveSpeed )
-{
-	double n ; //´ïµ½OdriveSpeedËùÐè¸³¸øodriveµÄ¶ÔÓ¦µÄÖµ
-	n = OdriveSpeed * 8192.0 / 3.1415926 / 105.0 ;
-	
- 	if ( WheelID == 0 )
-	{
-		USART_printf( USART1 , " v 0 %lf 0\n ",n) ;
-	}
-	
-	 	if ( WheelID == 1 )
-	{
-		USART_printf( USART3 , " v 0 %lf 0\n ",n) ;
-	}
-
-	 	if ( WheelID == 2 )
-	{
-		USART_printf( USART1 , " v 1 %lf 0\n ",n) ;
-	}
-	
-	 	if ( WheelID == 3 )
-	{
-		USART_printf( USART3 , " v 1 %lf 0\n ",n) ;
-	}
-}
-
 
 /*
-ÃèÊö£º½«ËÄÂÖËÙ¶È¼°·½Ïò¸³¸øµç»ú
-ÊäÈë£ºËÄÂÖ·ÖËÙ¶È¼°·½Ïò
-Êä³ö£ºÎÞ
-*/
-void set_motor(struct wheel Wheel)
+ * º¯ÊýÃû: Run_Line
+ * Ãè  Êö: ÈÃ³µ×ÓÒÔËÙÂÊv,ÑØÓë¾ø¶Ô×ø±êÏµyÖáÕý·½Ïò¼Ð½Çtheta£¨»¡¶ÈÖÆ)·½ÏòÖ±ÐÐ
+ * Êä  Èë£ºËÙÂÊv£¬¼Ð½Çtheta
+ * Êä  ³ö: ËÄ¸öÂÖ×ÓµÄËÙ¶È´óÐ¡ºÍÒÔ¼°ËÙ¶ÈÓë³µÉí×ø±êÏµyÖá¼Ð½Ç±äÁ¿WheelsSpeed[0]
+ * µ÷  ÓÃ: Íâ²¿µ÷ÓÃ
+ */
+
+void Run_Line(double v,double theta)
 {
-	Set_WheelLoc(1,Wheel.fl.wheelangle);
-	Set_WheelLoc(2,Wheel.fr.wheelangle);
-	Set_WheelLoc(3,Wheel.bl.wheelangle);
-	Set_WheelLoc(4,Wheel.br.wheelangle);
-	
-	Set_OdriveSpd(0,Wheel.fl.wheelvel);
-	Set_OdriveSpd(1,Wheel.fr.wheelvel);
-	Set_OdriveSpd(2,Wheel.bl.wheelvel);
-	Set_OdriveSpd(3,Wheel.br.wheelvel);
+	GetWheelsSpeed_Line( v,theta);
+	set_motor(WheelsSpeed);
 }
 
-
-double car_para[3]={300.0f,365.0f,0.8828330147f};//³¤ £¬¿í £¬yÖáÓë³µ¶Ô½ÇÏß½Ç¶È£¨Õý£©
-float r=236.2334650;
-//¹æ¶¨Ë³Ê±ÕëomegaÎªÕý£¬direction£¬1£¬4ÏóÏÞÎªÕý£¬2£¬3ÏóÏÞÎª¸º
-float factor=1.0f;// 
-
-float aatan(float x,float y) 
-{
-	double a;
-	if(x==0)
-		{
-		if(y>0)
-			a=pi/2;
-		else
-			a=-pi/2;
-		}
-	else
-		{a=atan(y/x);
-	   if(y<0&&x<0)
-		{
-		a=a;
-		factor=-1.0;
-		} 
-	   if(y<0&&x>0)
-		{a=a+pi;
-		factor=-1.0; 
-		} 
-	   if(y>0&&x>0)
-		{
-		a=a;
-		factor=1.0;
-		} 
-	   if(y>0&&x<0)
-		{a=a+pi;
-		factor=1.0;
-		} 
-        }
- 
-		return a;
-}
- 
-struct wheel anotherWheelsSpeed;
-
-
-/*
-ÊäÈë£º¾ø¶Ô×ø±êÏµµÄÄ¿±êËÙ¶È£¬Ä¿±êËÙ¶È·½Ïò£¬Ä¿±ê½ÇËÙ¶È£¬³µÏà¶ÔÓÚ¾ø¶Ô×ø±êÏµ·½Ïò£¨Ä¿Ç°µÄ£©
-Êä³ö£ºÃ¿¸öÂÖ×ÓµÄËÙ¶È¼°ËÙ¶È·½Ïò£¨³µÉí×ø±êÏµ£©
-*/
-struct wheel Wheel_vel(float vel,float direction,float omega,float pose_angle) //½Ç¶ÈÏà¹ØÎª»¡¶ÈÖÆ
-{
-	Position p,p1;
- struct wheel WHEEL;
-	float v;
-	float d;
-	float w;
- //×ª»»ÖÁ³µÉí×ø±êÏµ
-	v=vel;
-	d=direction-pose_angle;
-	w=omega;
-	//ËÄÂÖ·ÖËÙ¶È
-		v=vel;
-	d=direction-pose_angle;
-	w=omega;
- 
-	p1.x=v*sin(d);
-	p1.y=v*cos(d);
- 
-	p.x=w*r*sin(car_para[2]);
-	p.y=w*r*cos(car_para[2]);
- 
-	WHEEL.fl.wheelvel=factor*sqrtf((p1.x+p.x)*(p1.x+p.x)+(p1.y+p.y)*(p1.y+p.y));
-	WHEEL.fl.wheelangle=90.0-aatan((p1.x+p.x),(p1.y+p.y))/PI*180.0;
- 
-		
-	p.x=w*r*sin(car_para[2]);
-	p.y=-w*r*cos(car_para[2]);
-	WHEEL.fr.wheelvel=factor*sqrtf((p1.x+p.x)*(p1.x+p.x)+(p1.y+p.y)*(p1.y+p.y));
-	WHEEL.fr.wheelangle=90.0f-aatan((p1.x+p.x),(p1.y+p.y))/PI*180;
-	
-	p.x=-w*r*sin(car_para[2]);
-	p.y=w*r*cos(car_para[2]);
-	WHEEL.bl.wheelvel=factor*sqrtf((p1.x+p.x)*(p1.x+p.x)+(p1.y+p.y)*(p1.y+p.y));
-	WHEEL.bl.wheelangle=90.0f-aatan((p1.x+p.x),(p1.y+p.y))/PI*180;
-	
-	p.x=-w*r*sin(car_para[2]);
-	p.y=-w*r*cos(car_para[2]);
-	WHEEL.br.wheelvel=factor*sqrtf((p1.x+p.x)*(p1.x+p.x)+(p1.y+p.y)*(p1.y+p.y));
-	WHEEL.br.wheelangle=90.0f-aatan((p1.x+p.x),(p1.y+p.y))/PI*180;
-	
-	return WHEEL;
-}
