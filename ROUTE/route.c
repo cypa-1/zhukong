@@ -3,17 +3,22 @@
 
 typedef struct
 	{
-		double x;
-		double y;
+		float x;
+		float y;
 	}Positio;
-double car_para[3]={300.0f,365.0f,0.8828330147f};//³¤ £¬¿í £¬yÖáÓë³µ¶Ô½ÇÏß½Ç¶È£¨Õı£©
-double r=236.2334650;
+float car_para[3]={300.0f,365.0f,0.8828330147f};//³¤ £¬¿í £¬yÖáÓë³µ¶Ô½ÇÏß½Ç¶È£¨Õı£©
+float r=236.2334650;
 //¹æ¶¨Ë³Ê±ÕëomegaÎªÕı£¬direction£¬1£¬4ÏóÏŞÎªÕı£¬2£¬3ÏóÏŞÎª¸º
-double factor=1.0f;// µç»úÕı·´×ªÒò×Ó
+float factor=1.0f;// µç»úÕı·´×ªÒò×Ó
 
-double aatan(double x,double y) 
+ /*×÷Õß£ºÀî³½Èğ
+   ÃèÊö£ºÓÉx,y¼ÆËãÆä½Ç¶È£¬Í³Ò»ÖÁÉè¶¨×ø±êÏµ£¬²¢È·¶¨µç»úµÄÕı·´×ª
+   ÊäÈë£ºx,y
+   Êä³ö£ºÉè¶¨×ø±êÏµÏÂµÄ½Ç¶È
+*/
+float aatan(float x,float y) 
 {
-	double a;
+	float a;
 	if(x==0)
 		{
 		if(y>0)
@@ -42,23 +47,22 @@ double aatan(double x,double y)
 		factor=1.0;
 		} 
         }
- 
-		return a;
+    return a;
 }
  
  
-/*
+/*×÷Õß£ºÀî³½Èğ
 ÃèÊö£º½«¾ø¶Ô×ø±êÏµ³µËÙ¶È£¬×Ô×ª·Ö½âÎªËÄ¸öÖ±ÂÖµÄËÙ¶È·½Ïò
 ÊäÈë£º¾ø¶Ô×ø±êÏµµÄÄ¿±êËÙ¶È£¬Ä¿±êËÙ¶È·½Ïò£¬Ä¿±ê½ÇËÙ¶È£¬³µÏà¶ÔÓÚ¾ø¶Ô×ø±êÏµ·½Ïò£¨Ä¿Ç°µÄ£©
 Êä³ö£ºÃ¿¸öÂÖ×ÓµÄËÙ¶È¼°ËÙ¶È·½Ïò£¨³µÉí×ø±êÏµ£©
 */
-void Wheel_Vel(double vel,double direction,double omega,double pose_angle) //½Ç¶ÈÏà¹ØÎª»¡¶ÈÖÆ
+void Wheel_Vel(float vel,float direction,float omega,float pose_angle) //½Ç¶ÈÏà¹ØÎª»¡¶ÈÖÆ
 {
 	Positio p,p1;
  struct wheel WHEEL;
-	double v;
-	double d;
-	double w;
+	float v;
+	float d;
+	float w;
  //×ª»»ÖÁ³µÉí×ø±êÏµ
 	v=vel;
 	d=direction-pose_angle;
@@ -102,6 +106,7 @@ void Wheel_Vel(double vel,double direction,double omega,double pose_angle) //½Ç¶
 
 
 /*
+×÷Õß£ºÀî³½Èğ
 ÃèÊö£º½«ËÄÂÖËÙ¶È¼°·½Ïò¸³¸øµç»ú
 ÊäÈë£ºËÄÂÖ·ÖËÙ¶È¼°·½Ïò
 Êä³ö£ºÎŞ

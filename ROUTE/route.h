@@ -1,9 +1,10 @@
+ #ifndef _ROUTE_H
+ #define _ROUTE_H
  #include "all.h"
- 
  typedef struct
 {
-	double wheelvel;
-	double wheelangle;
+	float wheelvel;
+	float wheelangle;
 }wheel_para;
  
  struct wheel
@@ -14,11 +15,13 @@
 	wheel_para br;
 	
 };
-double aatan(double x,double y);
-void Wheel_Vel(double vel,double direction,double omega,double pose_angle);
+float aatan(float x,float y);
+void Wheel_Vel(float vel,float direction,float omega,float pose_angle);
 void set_motor(struct wheel Wheel);
 
 
 
+#endif
 
- 
+
+

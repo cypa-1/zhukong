@@ -3,7 +3,8 @@
 #include "all.h"
 
 
- /*描述：算出相近两点间的速度，速度方向，角速度(弧度)并赋值给四个轮子
+ /*作者：李辰瑞
+   描述：算出相近两点间的速度，速度方向，角速度(弧度)并赋值给四个轮子
    输入：两点 坐标 速度 速度方向 车体方向 PID角度，距离参数
 	 输出：无
 	 */
@@ -11,7 +12,7 @@
 	void point_vel( struct Path_Point start,struct Path_Point end,struct PID Pid_ang,struct PID Pid_dis)
 	{
 		struct Point Speed_start,Speed_end,Speed_delta,err_outspd;
-		double err_dis,err_angle,Vout_angle,Vout_dis,err_outw,outspd,outspddir;
+		float err_dis,err_angle,Vout_angle,Vout_dis,err_outw,outspd,outspddir;
 		
 		Speed_start.x = start.speed*sin(start.pos);
 		Speed_start.y = start.speed*cos(start.pos);
@@ -46,4 +47,5 @@
 		 
 		Wheel_Vel( outspd, outspddir, err_outw, start.pos);
 	}
-		  
+
+	
