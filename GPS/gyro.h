@@ -21,7 +21,7 @@ void Gyro_CheckFloat(void);
 #endif 
 
 //陀螺仪信息结构体
-struct Gyro_State
+extern struct Gyro_State
 {
     double angle;            //角度
     double convert1;        //陀螺仪正转系数

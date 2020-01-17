@@ -31,21 +31,7 @@ struct PID
 	double ep1;
 	double ep2;
 };
-
-//每个轮子对应的状态
-struct Mecanum_State
-{
-	uint8_t port;
-	int8_t arg;				//方向系数
-};
-
-struct Color_State
-{
-	uint16_t rgb565;
-	uint8_t r;
-	uint8_t g;
-	uint8_t b;
-};
+ 
 
 struct Encoder_State
 {
